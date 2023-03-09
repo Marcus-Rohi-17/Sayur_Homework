@@ -1,3 +1,8 @@
+'''
+Write an app for a cafe. Decide on the items in the cafe, stock of each item in the morning, 
+stock in the evening, sales amount at the end of the day and profit for each item. You need to restock an item 
+if the supply reaches 20% of the stock. Print the 3 items with highest sales, and top 3 highest profit.
+'''
 items = ["Coffee", "Tea", "Muffin", "Sandwich"]
 stock = [50, 30, 20, 10]
 sales = [0, 0, 0, 0]
@@ -27,6 +32,7 @@ def sell(item, quantity):
             print(f"Sorry, we only have {stock[i]} {item}(s) left.")
         else:
             stock[i] -= quantity
+             
             sales[i] += quantity
             revenue = profits[i] * quantity
             print(f"You bought {quantity} {item}(s) for {revenue:.2f}$. Thank you for your purchase!")
